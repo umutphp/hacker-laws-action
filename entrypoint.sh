@@ -2,6 +2,6 @@
 
 /hacker-laws-cli random > /law.txt
 
-curl -X POST $PR_URL -H "Content-Type: application/json" \
+curl -X POST $PR_URL -H "Content-Type: application/octet-stream" \
             -H "Authorization: token $GITHUB_TOKEN" \
             --data-binary "@/law.txt"
