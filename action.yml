@@ -1,0 +1,6 @@
+# action.yml
+name: 'Hacker Laws Action'
+description: 'An action to add random hacker law as a comment to the pull request'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
