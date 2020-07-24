@@ -1,6 +1,8 @@
-FROM alpine
+FROM ubuntu
 
-RUN apk add --no-cache curl
+RUN  apt-get update \
+  && apt-get install -y wget \
+  && rm -rf /var/lib/apt/lists/*
 
 COPY entrypoint.sh /entrypoint.sh
 COPY ./scripts/build.sh /build.sh
