@@ -4,3 +4,6 @@ description: 'An action to add random hacker law as a comment to the pull reques
 runs:
   using: 'docker'
   image: 'Dockerfile'
+branding:
+  icon: 'gift'
+  color: 'purple'
