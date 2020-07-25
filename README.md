@@ -4,6 +4,8 @@ An action to an add random hacker law (from [dwmkerr/hacker-laws](https://github
 
 ## Usage
 
+Use the following YAML to create the action file under the `.github/workflows` directory.
+
 ```yaml
 name: Hacker Laws Action
 
