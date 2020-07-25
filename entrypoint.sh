@@ -6,8 +6,8 @@ sed 's/\"/\\\"/g' /law.txt > /law_escaped.txt
 
 echo $PR_SENDER
 
-SENDER="@"
-SENDER+=$PR_SENDER
+PREPEND_STR="@"
+SENDER="$PREPEND_STR$PR_SENDER"
 
 echo $SENDER
 
