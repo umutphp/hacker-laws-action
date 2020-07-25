@@ -1,25 +1,32 @@
 # Hacker Laws Action
 
-This GitHub action will assign pull requests to their authors.
+An action to add random hacker law as a comment to the pull request.
 
 ## Usage
 
 ```yaml
-name: Assign PR to creator
+name: Hacker Laws Action
 
-on: [pull_request]
+on: 
+  pull_request:
+    types: [opened]
 
 jobs:
-  automation:
+  hacker_laws_action:
     runs-on: ubuntu-latest
+    name: Hacker Laws Action Job
     steps:
-    - name: Assign PR to creator
-      uses: thomaseizinger/assign-pr-creator-action@v1.0.0
-      if: github.event_name == 'pull_request' && github.event.action == 'opened'
-      with:
-        repo-token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Hacker Laws Action Step
+        env:
+          PR_URL: ${{ github.event.pull_request.comments_url }}
+          PR_SENDER: ${{ github.actor }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        uses: umutphp/hacker-laws-action@v1
+        id: hacker_laws_action
 ```
 
 ## Contributing
 
-Compared to other GitHub actions, this one uses a bundled, zero-dependency JavaScript file at runtime.
+Please feel free to contribute to the action.
