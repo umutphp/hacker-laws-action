@@ -11,7 +11,7 @@ SENDER="$PREPEND_STR$PR_SENDER"
 
 echo $SENDER
 
-echo '{ "body": "Hi ' "$SENDER, \n" 'This comment is a small gift to thank you for opening the PR. Here is a random law from [Hacker Laws repository](https://github.com/dwmkerr/hacker-laws).' > /law_json.txt
+echo '{ "body": "Hi ' "$SENDER, \n\n" 'A random law from [Hacker Laws repository](https://github.com/dwmkerr/hacker-laws) is a small gift to thank you for opening the PR.' > /law_json.txt
 cat /law_escaped.txt >> /law_json.txt
 echo '" }' >> /law_json.txt
 
