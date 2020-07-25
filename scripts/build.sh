@@ -7,5 +7,3 @@ curl -s https://api.github.com/repos/umutphp/hacker-laws-cli/releases/latest \
 | wget -qi -
 
 tar -xzvf hacker-laws-cli*.tar.gz
-
-cp hacker-laws-cli /
