@@ -1,6 +1,6 @@
 # Hacker Laws Action
 
-An action to add random hacker law as a comment to the pull request.
+An action to an add random hacker law (from [dwmkerr/hacker-laws](https://github.com/dwmkerr/hacker-laws) ) as a comment to the pull request.
 
 ## Usage
 
