@@ -7,11 +7,11 @@ sed 's/\"/\\\"/g' /law.txt > /law_escaped.txt
 echo $PR_SENDER
 
 SENDER="@"
-SENDER+="$PR_SENDER"
+SENDER+="${PR_SENDER}"
 
 echo $SENDER
 
-echo '{ "body": "Hi $SENDER, This comment is a small gift to you for opening the PR. Here is a random law from [Hacker Laws repository](https://github.com/dwmkerr/hacker-laws).' > /law_json.txt
+echo '{ "body": "Hi ${SENDER}, This comment is a small gift to you for opening the PR. Here is a random law from [Hacker Laws repository](https://github.com/dwmkerr/hacker-laws).' > /law_json.txt
 cat /law_escaped.txt >> /law_json.txt
 echo '" }' >> /law_json.txt
 
