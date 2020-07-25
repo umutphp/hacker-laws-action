@@ -12,7 +12,7 @@ jobs:
       - name: Hacker Laws Action Step
         env:
           PR_URL: ${{ github.event.pull_request.comments_url }}
-          PR_SENDER: ${{ github.event.pull_request.sender.login }}
+          PR_SENDER: ${{ github.actor }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         uses: ./
         id: hacker_laws_action
