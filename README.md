@@ -2,6 +2,8 @@
 
 An action to an add random hacker law (from [dwmkerr/hacker-laws](https://github.com/dwmkerr/hacker-laws) ) as a comment to the pull request.
 
+A sample execution can be seen on this [PR](https://github.com/umutphp/hacker-laws-action/pull/1).
+
 ## Usage
 
 Use the following YAML to create the action file under the `.github/workflows` directory.
