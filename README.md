@@ -33,4 +33,4 @@ jobs:
 
 ## Contributing
 
-Please feel free to contribute to the action.
+Please feel free to contribute to the action. 
